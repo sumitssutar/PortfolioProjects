@@ -6,6 +6,7 @@
 
 -- Skills used : SQL FUNCTIONS, JOINS, CTE's, Temp Tables, Windows Functions, Aggregate Functions, CREATE VIEWS, Converting Data Types
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Showing CovidDeaths Dataset
 
@@ -14,7 +15,8 @@ FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL 
 ORDER BY 3,4
 
-	
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Showing CovidVaccinations Dataset
 
 SELECT *
@@ -22,6 +24,7 @@ FROM PortfolioProject..CovidVaccinations
 Where continent IS NOT NULL
 ORDER BY 3,4
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Now we work on CovidDeaths data
 
@@ -30,6 +33,7 @@ FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL
 ORDER BY 1,2
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Looking at total_cases vs total_deaths
 
@@ -38,8 +42,9 @@ FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL
 ORDER BY 1,2
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
--- above code gave error as 'Operand data type nvarchar is invalid for divide operator'
+-- Above code gave error as 'Operand data type nvarchar is invalid for divide operator'
 -- so we will convert datatype to float and check for NULL values
 
 SELECT Location, date, total_cases, total_deaths, (CONVERT(float, total_deaths) / NULLIF(CONVERT(float, total_cases), 0))*100 as DeathPercentage
@@ -47,6 +52,7 @@ FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL
 ORDER BY 1,2
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- We can look for perticular Location like Afghanistan
 
@@ -55,17 +61,23 @@ FROM PortfolioProject..CovidDeaths
 WHERE Location ='Afghanistan' AND continent IS NOT NULL
 ORDER BY 1,2
 
+-- Result : Recent DeathPercentage Rate in Afghanistanis is 3.4%
 
--- for United States
--- shows likelihood of dying in your country by COVID
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- For United States
+-- Shows likelihood of dying in your country by COVID
 
 SELECT Location, date, total_cases, total_deaths, (CONVERT(float, total_deaths) / NULLIF(CONVERT(float, total_cases), 0))*100 as DeathPercentage
 FROM PortfolioProject..CovidDeaths
 WHERE Location LIKE '%States%' AND continent IS NOT NULL
 ORDER BY 1,2
 
+-- Result : Recent DeathPercentage Rate in United States is 10%
 
--- Looking at total_cases vs population
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- * Looking at total_cases vs population
 -- shows what percentage of population got COVID in INDIA
 
 SELECT Location, date, population, total_cases, (total_cases/population)*100 as Population_Percentage_got_COVID
@@ -73,6 +85,9 @@ FROM PortfolioProject..CovidDeaths
 WHERE Location = 'India' AND continent IS NOT NULL
 ORDER BY 1,2
 
+-- Result : Max 9% Population got Covid in India
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Looking at Countries with Highest Infection Rate compared to Population
 
@@ -82,6 +97,7 @@ WHERE continent IS NOT NULL
 GROUP BY Location, population
 ORDER BY InfectedPopulationPercentage DESC
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Looking at Countries with Highest Death Count
 
@@ -105,6 +121,7 @@ WHERE continent IS NOT NULL
 GROUP BY continent
 ORDER BY TotalDeathCount DESC
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- GLOBAL NUMBERS
 
@@ -114,9 +131,11 @@ SELECT SUM(new_cases) AS total_cases, SUM(new_deaths) AS total_deaths, (SUM(new_
 FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Looking at Total Population VS Vaccinations
 -- Shows Percentage of Pupulation that has received at least one Covid Vaccine
+-- Here, we JOIN CoviedDeaths Dataset to CovidVaccinations 
 
 SELECT dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations,
 SUM(CONVERT(float, vac.new_vaccinations)) OVER (PARTITION BY dea.location ORDER BY dea.location,dea.date) AS RollingPeopleVaccinated
@@ -127,6 +146,7 @@ JOIN PortfolioProject..CovidVaccinations vac
 WHERE dea.continent IS NOT NULL
 ORDER BY 2,3
 
+-------------------------------------------------------------------------------------------------------------------------------------------------- 
 
 -- Using CTE(Common Table Expression) to perform Calculation on PARTITION BY in previous query
 -- Looking at Percentage of Population Vaccinated as per above columns
@@ -145,6 +165,7 @@ WHERE dea.continent IS NOT NULL
 SELECT *, (RollingPeopleVaccinated/population)*100 AS PercentPopulationVaccinated
 FROM PopvsVac
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Temp Tables
 -- Now we are going to do same thing by using Temp Tables
@@ -172,6 +193,7 @@ SELECT *, (RollingPeopleVaccinated/population)*100 AS PercentPopulationVaccinate
 
 FROM #PercentPopulationVaccinated
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- CREATE VIEW to store data for later Visualizations
 
@@ -189,3 +211,6 @@ GO
 
 SELECT *
 FROM PercentPopulationVaccinated 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
