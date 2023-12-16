@@ -6,18 +6,24 @@
 
 -- Skills used : SQL FUNCTIONS, JOINS, CTE's, Temp Tables, Windows Functions, Aggregate Functions, CREATE VIEWS, Converting Data Types
 
+
+-- Showing CovidDeaths Dataset
+
 SELECT *
 FROM PortfolioProject..CovidDeaths
 WHERE continent IS NOT NULL 
 ORDER BY 3,4
 
+	
+-- Showing CovidVaccinations Dataset
 
---SELECT *
---FROM PortfolioProject..CovidVaccinations
---Where continent IS NOT NULL
---ORDER BY 3,4
+SELECT *
+FROM PortfolioProject..CovidVaccinations
+Where continent IS NOT NULL
+ORDER BY 3,4
 
---Now we work on CovidDeaths data
+
+-- Now we work on CovidDeaths data
 
 SELECT location, date, total_cases, new_cases, total_deaths, population
 FROM PortfolioProject..CovidDeaths
@@ -25,7 +31,7 @@ WHERE continent IS NOT NULL
 ORDER BY 1,2
 
 
---Looking at total_cases vs total_deaths
+-- Looking at total_cases vs total_deaths
 
 SELECT location, date, total_cases, total_deaths, (total_deaths/total_cases)
 FROM PortfolioProject..CovidDeaths
@@ -33,8 +39,8 @@ WHERE continent IS NOT NULL
 ORDER BY 1,2
 
 
---above code gave error as 'Operand data type nvarchar is invalid for divide operator'
---so we will convert datatype to float and check for NULL values
+-- above code gave error as 'Operand data type nvarchar is invalid for divide operator'
+-- so we will convert datatype to float and check for NULL values
 
 SELECT Location, date, total_cases, total_deaths, (CONVERT(float, total_deaths) / NULLIF(CONVERT(float, total_cases), 0))*100 as DeathPercentage
 FROM PortfolioProject..CovidDeaths
@@ -42,7 +48,7 @@ WHERE continent IS NOT NULL
 ORDER BY 1,2
 
 
---We can look for perticular Location like Afghanistan
+-- We can look for perticular Location like Afghanistan
 
 SELECT Location, date, total_cases, total_deaths, (CONVERT(float, total_deaths) / NULLIF(CONVERT(float, total_cases), 0))*100 as DeathPercentage
 FROM PortfolioProject..CovidDeaths
@@ -50,8 +56,8 @@ WHERE Location ='Afghanistan' AND continent IS NOT NULL
 ORDER BY 1,2
 
 
---for United States
---shows likelihood of dying in your country by COVID
+-- for United States
+-- shows likelihood of dying in your country by COVID
 
 SELECT Location, date, total_cases, total_deaths, (CONVERT(float, total_deaths) / NULLIF(CONVERT(float, total_cases), 0))*100 as DeathPercentage
 FROM PortfolioProject..CovidDeaths
@@ -59,8 +65,8 @@ WHERE Location LIKE '%States%' AND continent IS NOT NULL
 ORDER BY 1,2
 
 
---Looking at total_cases vs population
---shows what percentage of population got COVID in INDIA
+-- Looking at total_cases vs population
+-- shows what percentage of population got COVID in INDIA
 
 SELECT Location, date, population, total_cases, (total_cases/population)*100 as Population_Percentage_got_COVID
 FROM PortfolioProject..CovidDeaths
@@ -68,7 +74,7 @@ WHERE Location = 'India' AND continent IS NOT NULL
 ORDER BY 1,2
 
 
---Looking at Countries with Highest Infection Rate compared to Population
+-- Looking at Countries with Highest Infection Rate compared to Population
 
 SELECT Location, population, MAX(total_cases) AS HighestInfectionCount, MAX(total_cases/population)*100 AS InfectedPopulationPercentage
 FROM PortfolioProject..CovidDeaths
@@ -110,7 +116,7 @@ WHERE continent IS NOT NULL
 
 
 -- Looking at Total Population VS Vaccinations
---Shows Percentage of Pupulation that has received at least one Covid Vaccine
+-- Shows Percentage of Pupulation that has received at least one Covid Vaccine
 
 SELECT dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations,
 SUM(CONVERT(float, vac.new_vaccinations)) OVER (PARTITION BY dea.location ORDER BY dea.location,dea.date) AS RollingPeopleVaccinated
@@ -140,8 +146,8 @@ SELECT *, (RollingPeopleVaccinated/population)*100 AS PercentPopulationVaccinate
 FROM PopvsVac
 
 
---Temp Tables
---Now we are going to do same thing by using Temp Tables
+-- Temp Tables
+-- Now we are going to do same thing by using Temp Tables
 
 DROP TABLE IF EXISTS #PercentPopulationVaccinated
 CREATE TABLE #PercentPopulationVaccinated 
