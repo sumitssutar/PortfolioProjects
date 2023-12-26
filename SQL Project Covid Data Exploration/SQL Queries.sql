@@ -85,7 +85,7 @@ FROM PortfolioProject..CovidDeaths
 WHERE Location = 'India' AND continent IS NOT NULL
 ORDER BY 1,2
 
--- Result : Max 9% Population got Covid in India
+-- Result : Max 3% Population got Covid in India
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
