@@ -2,7 +2,7 @@ Here is the
 
 # SQL PortfolioProject of Data Exploration on Covid Dataset
 
-Link to Dataset - https://ourworldindata.org/covid-deaths or you can download above dataset
+Link to Dataset - https://ourworldindata.org/covid-deaths or look above datasets
 
 From above downloaded dataset, We make two datasets named as 'CovidDeaths' and 'CovidVaccinations' to explore them.
 
