@@ -1,4 +1,4 @@
-# Tableau Public Dashboard : Project on AirBnB Listings Data
+# Data Visualization & Dashboard on AirBnB Listings Data
 
 Explore the Tableau Public dashboard by following this link
 
