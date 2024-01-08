@@ -26,4 +26,4 @@ We looked for average price per bedrrom on the basis of number of bedrooms in th
 
 * Dashboard :
 
-By combining all the above four sheets, we made Dashboard to show and we can interact with the each and every indivisual parameter or data point.
+By combining all the above four sheets, we made Dashboard for Visualization and we can interact with the each and every indivisual parameter or data point with other parameter or data points. 
