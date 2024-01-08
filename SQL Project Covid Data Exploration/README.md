@@ -1,6 +1,6 @@
-Here is the 
+# Data Exploration on Covid Dataset in SQL
 
-# SQL PortfolioProject of Data Exploration on Covid Dataset
+Used SQL Server to Explore Global COVID 19 Data. 
 
 Link to Dataset - https://ourworldindata.org/covid-deaths or look above datasets
 
