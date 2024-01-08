@@ -5,7 +5,7 @@ Explore the Tableau Public dashboard by following this link (https://public.tabl
 Made Data Visualizations & Dashboard in Tableau to analyze Price and Profit.
 
 On the sheet 1 - Price by Zipcode
-    We made visualization on Avg Price vs Zipcode.
+We made visualization on Avg Price vs Zipcode.
 
 on the sheet 2 - Price by Zipcode with map
     We used map visualization on Longitude vs Lattitude which shows areas with Zipcode and AVG(Price).
