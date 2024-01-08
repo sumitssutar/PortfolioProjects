@@ -17,4 +17,5 @@ On the sheet 4 - Avg Price per Bedroom,
     We looked for average price per bedrrom on the basis of number of bedrooms in the house by Bedrooms(Converte to Dimension) vs AVG(Price).
 
 ### Dashboard :
-    By combining all the above four sheets, we made Dashboard to show and we can interact with the each and every indivisual parameter or data point.
+    By combining all the above four sheets, we made Dashboard to show and we can interact with the each and
+    every indivisual parameter or data point.
