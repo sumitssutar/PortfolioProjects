@@ -8,4 +8,4 @@ From above downloaded dataset, We make two datasets named as 'CovidDeaths' and '
 
 Skills used in this Project are SQL FUNCTIONS, JOINS, CTE's, Temp Tables, Windows Functions, Aggregate Functions, CREATE VIEWS, Converting Data Types
 
-Foe more details and SQL Queries, view above file named as 'SQL Queries=Data Exploration on Covid Data'.
+Foe more details and SQL Queries, view above file named as 'SQL Queries=Data Exploration on Covid Data.sql'.
