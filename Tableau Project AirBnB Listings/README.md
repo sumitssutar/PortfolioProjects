@@ -25,6 +25,10 @@ We looked for highest revenue in the which week or month by Week/Month vs SUM(Pr
 
 We looked for average price per bedrrom on the basis of number of bedrooms in the house by Bedrooms(Converte to Dimension) vs AVG(Price).
 
+* On the sheet 5 - Distict Count of Bedroom Listings
+
+We looked for different count of each bedroom listings that is 1 to 6 bedrooms.
+
 
 * Dashboard :
 
