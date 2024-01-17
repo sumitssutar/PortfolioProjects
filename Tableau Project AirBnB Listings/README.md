@@ -34,4 +34,8 @@ We looked for different count of each bedroom listings that is 1 to 6 bedrooms.
 
 By combining all the above four sheets, we made Dashboard for Visualization and we can interact with the each and every indivisual parameter or data point with other parameter or data points. 
 
-For the whole view click on the above link.
+I attached Dashboard screenshot below & if you want to interact with it/ for the whole view click on the above link.
+
+![](https://github.com/sumitssutar/PortfolioProjects/blob/main/Tableau%20Project%20AirBnB%20Listings/Taleau%20AirBnB%20Listings%20Dashboard%20Screenshot.png)
+
+
