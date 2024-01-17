@@ -12,4 +12,7 @@ We can view and interact with the dashboard by using this link :
 * Dashboard :
        Made Dashboard by combining and organizing all of the above Visualizations.
 
+I attached Dashboard screenshot below & if you want to interact with it/ for the whole view click on the above link.
+
+![](https://github.com/sumitssutar/PortfolioProjects/blob/main/Power%20BI%20Project%20%3A%20Data%20Professional%20Survey%20Breakdown/Power%20BI%20Data%20Profession%20Survey%20Dashboard%20Screenshot.png)
 
