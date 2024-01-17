@@ -10,4 +10,8 @@ We made analysis by using Pivot Tables & Charts and this is done in 'Pivot Table
 
 Finally in the 'Dashboard' sheet, we made Dashboard for Data Visualization and Data Analysis.
 
-For whole Project view and Dashboard, we can download above excel file.
+I attached Dashboard screenshot below & if you want to interact with it, download above excel file.
+
+![](Excel Project : Bike Sales Dashboard/Bike Sales Dashboard Screenshot.png)
+
+
