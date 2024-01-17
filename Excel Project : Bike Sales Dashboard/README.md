@@ -12,6 +12,6 @@ Finally in the 'Dashboard' sheet, we made Dashboard for Data Visualization and D
 
 I attached Dashboard screenshot below & if you want to interact with it, download above excel file.
 
+<br>
 ![](Excel Project : Bike Sales Dashboard/Bike Sales Dashboard Screenshot.png)
-
-
+<br>
