@@ -12,4 +12,4 @@ Finally in the 'Dashboard' sheet, we made Dashboard for Data Visualization and D
 
 I attached Dashboard screenshot below & if you want to interact with it, download above excel file.
 
-![](Excel%20Project%20%3A%20Bike%20Sales%20Dashboard/Bike%20Sales%20Dashboard%20Screenshot.png)
+![](https://github.com/sumitssutar/PortfolioProjects/blob/main/Excel%20Project%20%3A%20Bike%20Sales%20Dashboard/Bike%20Sales%20Dashboard%20Screenshot.png)
