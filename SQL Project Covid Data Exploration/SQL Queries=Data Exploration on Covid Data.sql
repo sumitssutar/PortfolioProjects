@@ -175,7 +175,7 @@ WHERE dea.continent IS NOT NULL
 SELECT *, (RollingPeopleVaccinated/population)*100 AS PercentPopulationVaccinated
 FROM PopvsVac
 
--- Observation from Results: 49% of Population in Alabania Vaccinated.	
+-- Observation from Results: 49% of Population in Albania Vaccinated.	
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
