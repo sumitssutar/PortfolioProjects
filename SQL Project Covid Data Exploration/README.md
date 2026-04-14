@@ -96,10 +96,10 @@ covid19-data-exploration-sql-excel/
 │
 ├── sql/
 │   └── SQL Queries=Data Exploration on Covid Data.sql
-|
+│
 ├── docs/
 │   └── data_catalog.md
-|
+│
 ├── README.md
 └── .gitignore
 ```
