@@ -95,8 +95,11 @@ covid19-data-exploration-sql-excel/
 │   ├── CovidVaccinations.xlsx
 │
 ├── sql/
-│   └── covid_data_exploration.sql
-│
+│   └── SQL Queries=Data Exploration on Covid Data.sql
+|
+├── docs/
+│   └── data_catalog.md
+|
 ├── README.md
 └── .gitignore
 ```
