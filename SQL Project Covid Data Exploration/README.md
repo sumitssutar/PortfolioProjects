@@ -1,11 +1,112 @@
-# Data Exploration on Covid Dataset in SQL
+# 🦠 COVID-19 Data Exploration (Excel & SQL Project)
 
-Used SQL Server to Explore Global COVID 19 Data. 
+## 📌 Project Overview
+This project explores global COVID-19 data using SQL and Excel to uncover trends in infections, deaths and vaccinations.  
+The dataset was cleaned, transformed and analyzed to generate meaningful insights for understanding the pandemic impact.
 
-Link to Dataset - https://ourworldindata.org/covid-deaths or look above datasets
+---
 
-From above downloaded dataset, We make two datasets named as 'CovidDeaths' and 'CovidVaccinations' to explore them.
+## 🧩 Business Problem
+There is a lack of structured insights to understand:
+- Infection spread across countries  
+- Death rates and severity  
+- Vaccination progress globally  
 
-Skills used in this Project are SQL FUNCTIONS, JOINS, CTE's, Temp Tables, Windows Functions, Aggregate Functions, CREATE VIEWS, Converting Data Types
+This makes it difficult to analyze trends and support data-driven decisions.
 
-For more details and SQL Queries, view above file named as 'SQL Queries=Data Exploration on Covid Data.sql'.
+---
+
+## 🎯 Goal
+Analyze COVID-19 data using SQL to identify patterns in cases, deaths and vaccinations for better global insights.
+
+---
+
+## 📊 Dataset Description
+
+### 🗂 CovidDeaths
+- location  
+- date  
+- total_cases  
+- new_cases  
+- total_deaths  
+- population  
+- continent
+- etc...
+
+### 🗂 CovidVaccinations
+- location  
+- date  
+- new_vaccinations  
+- continent
+- etc...  
+
+---
+
+## 🧹 Data Preparation
+- Cleaned and formatted Excel datasets  
+- Ensured consistency for SQL joins  
+- Converted data types for calculations  
+- Handled NULL and division errors using `NULLIF()`  
+
+---
+
+## 🛠 SQL Techniques Used
+- Aggregate Functions (SUM, MAX)  
+- JOINS  
+- Window Functions (`SUM() OVER PARTITION BY`)  
+- CTE (Common Table Expressions)  
+- Temp Tables  
+- CREATE VIEW  
+- Data Type Conversion  
+
+---
+
+## 🔍 Key Insights
+- Infection and death rates vary significantly across countries  
+- Some countries show high infection but lower death rates  
+- Vaccination rollout differs widely across regions  
+- Rolling vaccination trends show steady progress over time  
+- Population size impacts overall COVID impact analysis  
+
+---
+
+## 💼 Business Impact
+- Helps understand global pandemic trends  
+- Supports public health analysis  
+- Enables country-wise comparison  
+- Provides foundation for BI tools like Power BI/Tableau  
+
+---
+
+## 🛠 Tools Used
+- Microsoft Excel  
+- SQL Server (SSMS)  
+- SQL  
+
+---
+
+## 📂 Repository Structure
+
+```bash
+covid19-data-exploration-sql-excel/
+│
+├── dataset/
+│   ├── CovidDeaths.xlsx
+│   ├── CovidVaccinations.xlsx
+│
+├── sql/
+│   └── covid_data_exploration.sql
+│
+├── README.md
+└── .gitignore
+```
+
+---
+
+## 🛡️ License
+
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+
+## 🌟 About Me
+
+Hi there! I'm **Sumit Sutar**. An experienced Data Analyst who uncovers hidden trends, patterns and anomalies and leverages business intelligence to generate insights, improve operational efficiency and drive organizational growth.
