@@ -60,7 +60,7 @@ Pivot Tables were created to analyze key metrics:
 
 ## 📈 Dashboard Preview
 
-![](images/bike_sales_dashboard.png)
+![](Images/bike_sales_dashboard.png)
 
 ---
 
