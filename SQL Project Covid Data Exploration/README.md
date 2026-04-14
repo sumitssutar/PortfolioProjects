@@ -113,3 +113,7 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 ## 🌟 About Me
 
 Hi there! I'm **Sumit Sutar**. An experienced Data Analyst who uncovers hidden trends, patterns and anomalies and leverages business intelligence to generate insights, improve operational efficiency and drive organizational growth.
+
+Let's stay in touch! Feel free to connect with me on the following platforms:
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sumitsutar321)
