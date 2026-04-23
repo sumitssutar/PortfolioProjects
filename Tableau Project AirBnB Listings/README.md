@@ -58,7 +58,7 @@ The dataset includes multiple tables:
 ---
 
 ## 📊 Dashboard Preview
-![](Images/airbnb_dashboard.png)
+![](images/airbnb_dashboard.png)
 
 ---
 
